@@ -2,118 +2,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0b12">
-  <title>NKN SocialUp | SMM Panel</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #0b0b12;
-      color: #f5f5ff;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #282538;
-    }
-    .logo { font-size: 23px; font-weight: 800; }
-    .logo span { color: #a78bfa; }
-    .login {
-      color: white; text-decoration: none;
-      border: 1px solid #7654df; border-radius: 9px;
-      padding: 10px 14px;
-    }
-    main {
-      max-width: 850px; margin: auto;
-      padding: 55px 20px;
-    }
-    .tag {
-      color: #c4b5fd; background: #21183a;
-      display: inline-block; padding: 8px 12px;
-      border-radius: 20px; font-size: 13px;
-    }
-    h1 { font-size: clamp(36px, 8vw, 60px); line-height: 1.12; }
-    h1 span { color: #a78bfa; }
-    p { color: #b8b8c9; line-height: 1.8; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-    .btn {
-      display: inline-block; padding: 14px 20px;
-      border-radius: 10px; text-decoration: none; font-weight: bold;
-    }
-    .primary { background: #8056e8; color: white; }
-    .secondary { border: 1px solid #383349; color: white; }
-    .grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 14px; margin-top: 42px;
-    }
-    .card {
-      background: #13131e; border: 1px solid #292638;
-      border-radius: 14px; padding: 20px;
-    }
-    .card h3 { margin-top: 0; }
-    .icon { font-size: 25px; }
-    footer {
-      text-align: center; padding: 25px;
-      border-top: 1px solid #282538; color: #88889b;
-      font-size: 13px;
-    }
-    @media(max-width: 480px) {
-      .grid { grid-template-columns: 1fr; }
-      main { padding-top: 38px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NKN SocialUp | SMM Panel</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080b14;color:#f5f7ff;font-family:Arial,sans-serif}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #24283a}
+.logo{font-size:23px;font-weight:bold;color:#9b8cff}
+button{background:#795cff;color:white;border:0;border-radius:9px;padding:12px 18px;font-weight:bold;cursor:pointer}
+main{max-width:850px;margin:60px auto;padding:20px;text-align:center}
+h1{font-size:clamp(32px,7vw,54px);margin-bottom:14px}
+p{color:#b5bdd0;line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:35px 0}
+.card{background:#121728;border:1px solid #292f48;padding:22px;border-radius:14px}
+.auth{max-width:390px;margin:25px auto;background:#111627;border:1px solid #292f48;border-radius:15px;padding:22px;text-align:left}
+.auth h2{text-align:center}
+input{width:100%;padding:13px;margin:8px 0 14px;background:#080b14;border:1px solid #343b55;border-radius:8px;color:white}
+.auth button{width:100%;margin-top:8px}
+.switch{text-align:center;font-size:14px;margin-top:18px}
+a{color:#a99aff;cursor:pointer}
+#message{font-size:14px;overflow-wrap:anywhere}
+footer{text-align:center;color:#8992aa;padding:30px}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo">NKN <span>SocialUp</span></div>
-    <a class="login" href="#get-started">Get Started</a>
-  </header>
+<header>
+  <div class="logo">NKN SocialUp</div>
+  <button onclick="showAuth('login')">Login / Sign Up</button>
+</header>
+<main>
+  <p>YOUR SOCIAL MEDIA GROWTH PARTNER</p>
+  <h1>Grow Your Social Media<br>With NKN SocialUp</h1>
+  <p>Explore social media marketing services with clear pricing, account access and order tracking.</p>
+  <div class="cards">
+    <div class="card"><h3>Social Services</h3><p>Explore available services.</p></div>
+    <div class="card"><h3>BDT Wallet</h3><p>Bangladeshi Taka support planned.</p></div>
+    <div class="card"><h3>Order Tracking</h3><p>Track your orders from your dashboard.</p></div>
+  </div>
+  <button onclick="showAuth('signup')">Create Free Account</button>
+  <section class="auth" id="auth" hidden>
+    <h2 id="formTitle">Login</h2>
+    <form id="authForm">
+      <label id="nameLabel" hidden>Full Name</label>
+      <input id="fullName" placeholder="Your full name" autocomplete="name" hidden>
+      <label>Email Address</label>
+      <input id="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+      <label>Password</label>
+      <input id="password" type="password" placeholder="At least 6 characters" minlength="6" autocomplete="current-password" required>
+      <button id="submitBtn" type="submit">Login</button>
+    </form>
+    <p class="switch" id="switchText">New here? <a onclick="showAuth('signup')">Create account</a></p>
+    <p id="message" role="status"></p>
+  </section>
+</main>
+<footer>© 2026 NKN SocialUp. All rights reserved.</footer>
 
-  <main>
-    <span class="tag">SOCIAL MEDIA MARKETING PANEL</span>
-    <h1>Grow Your Social Presence with <span>NKN SocialUp.</span></h1>
-    <p>
-      Discover social media marketing services in one place.
-      Explore available services, submit orders and track your
-      requests through a simple dashboard as the platform develops.
-    </p>
-    <div class="actions" id="get-started">
-      <a class="btn primary" href="#services">Explore Services →</a>
-      <a class="btn secondary" href="#about">Learn More</a>
-    </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://egldvxcwtdpqbjreojsq.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = sb_publishable_5PuGPLVHz9J6oy5aKdgnYg_hsJDg6T8
+const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+let mode = "login";
 
-    <section class="grid" id="services">
-      <div class="card">
-        <div class="icon">📱</div>
-        <h3>Social Media Services</h3>
-        <p>Browse services as they become available on the platform.</p>
-      </div>
-      <div class="card">
-        <div class="icon">📋</div>
-        <h3>Order Tracking</h3>
-        <p>Order submission and status tracking will be added next.</p>
-      </div>
-      <div class="card">
-        <div class="icon">💳</div>
-        <h3>BDT Payments</h3>
-        <p>Manual bKash and Nagad deposit requests are planned.</p>
-      </div>
-      <div class="card" id="about">
-        <div class="icon">🛡️</div>
-        <h3>Customer Dashboard</h3>
-        <p>Account registration, wallet and order history are coming next.</p>
-      </div>
-    </section>
-  </main>
+function showAuth(nextMode) {
+  mode = nextMode;
+  document.getElementById("auth").hidden = false;
+  document.getElementById("formTitle").textContent = mode === "signup" ? "Create Account" : "Login";
+  document.getElementById("submitBtn").textContent = mode === "signup" ? "Sign Up" : "Login";
+  document.getElementById("nameLabel").hidden = mode !== "signup";
+  document.getElementById("fullName").hidden = mode !== "signup";
+  document.getElementById("fullName").required = mode === "signup";
+  document.getElementById("password").autocomplete = mode === "signup" ? "new-password" : "current-password";
+  document.getElementById("switchText").innerHTML = mode === "signup"
+    ? 'Already registered? <a onclick="showAuth(\'login\')">Login</a>'
+    : 'New here? <a onclick="showAuth(\'signup\')">Create account</a>';
+  document.getElementById("message").textContent = "";
+  document.getElementById("auth").scrollIntoView({behavior:"smooth"});
+}
 
-  <footer>
-    © 2026 NKN SocialUp. All rights reserved.
-  </footer>
+document.getElementById("authForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  const message = document.getElementById("message");
+  const button = document.getElementById("submitBtn");
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  button.disabled = true;
+  message.textContent = "Please wait...";
+  try {
+    if (SUPABASE_PUBLISHABLE_KEY === "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE") {
+      throw new Error("Please add your Supabase Publishable Key in the code first.");
+    }
+    let result;
+    if (mode === "signup") {
+      result = await client.auth.signUp({
+        email, password,
+        options: { data: { full_name: document.getElementById("fullName").value.trim() } }
+      });
+    } else {
+      result = await client.auth.signInWithPassword({ email, password });
+    }
+    if (result.error) throw result.error;
+    message.textContent = mode === "signup"
+      ? "Account request submitted. Check your email to confirm registration."
+      : "Login successful!";
+  } catch (error) {
+    message.textContent = error.message || "Something went wrong. Please try again.";
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
 </body>
-        </html>
-        
+</html>
