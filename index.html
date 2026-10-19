@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b12">
+  <title>NKN SocialUp | SMM Panel</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #0b0b12;
+      color: #f5f5ff;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #282538;
+    }
+    .logo { font-size: 23px; font-weight: 800; }
+    .logo span { color: #a78bfa; }
+    .login {
+      color: white; text-decoration: none;
+      border: 1px solid #7654df; border-radius: 9px;
+      padding: 10px 14px;
+    }
+    main {
+      max-width: 850px; margin: auto;
+      padding: 55px 20px;
+    }
+    .tag {
+      color: #c4b5fd; background: #21183a;
+      display: inline-block; padding: 8px 12px;
+      border-radius: 20px; font-size: 13px;
+    }
+    h1 { font-size: clamp(36px, 8vw, 60px); line-height: 1.12; }
+    h1 span { color: #a78bfa; }
+    p { color: #b8b8c9; line-height: 1.8; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .btn {
+      display: inline-block; padding: 14px 20px;
+      border-radius: 10px; text-decoration: none; font-weight: bold;
+    }
+    .primary { background: #8056e8; color: white; }
+    .secondary { border: 1px solid #383349; color: white; }
+    .grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 14px; margin-top: 42px;
+    }
+    .card {
+      background: #13131e; border: 1px solid #292638;
+      border-radius: 14px; padding: 20px;
+    }
+    .card h3 { margin-top: 0; }
+    .icon { font-size: 25px; }
+    footer {
+      text-align: center; padding: 25px;
+      border-top: 1px solid #282538; color: #88889b;
+      font-size: 13px;
+    }
+    @media(max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+      main { padding-top: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">NKN <span>SocialUp</span></div>
+    <a class="login" href="#get-started">Get Started</a>
+  </header>
+
+  <main>
+    <span class="tag">SOCIAL MEDIA MARKETING PANEL</span>
+    <h1>Grow Your Social Presence with <span>NKN SocialUp.</span></h1>
+    <p>
+      Discover social media marketing services in one place.
+      Explore available services, submit orders and track your
+      requests through a simple dashboard as the platform develops.
+    </p>
+    <div class="actions" id="get-started">
+      <a class="btn primary" href="#services">Explore Services →</a>
+      <a class="btn secondary" href="#about">Learn More</a>
+    </div>
+
+    <section class="grid" id="services">
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Social Media Services</h3>
+        <p>Browse services as they become available on the platform.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Order Tracking</h3>
+        <p>Order submission and status tracking will be added next.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💳</div>
+        <h3>BDT Payments</h3>
+        <p>Manual bKash and Nagad deposit requests are planned.</p>
+      </div>
+      <div class="card" id="about">
+        <div class="icon">🛡️</div>
+        <h3>Customer Dashboard</h3>
+        <p>Account registration, wallet and order history are coming next.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 NKN SocialUp. All rights reserved.
+  </footer>
+</body>
+        </html>
+        
